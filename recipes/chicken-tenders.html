@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chicken Tenders - Rezept</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        :root {
+            --primary: #ff9800;
+            --background: #0a0a0a;
+            --card-bg: #161616;
+            --text: #ffffff;
+            --text-secondary: #a0a0a0;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 12px 24px;
+            background: var(--card-bg);
+            border: none;
+            border-radius: 12px;
+            color: var(--text);
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+        .back-button:hover {
+            background: var(--primary);
+            transform: translateX(-5px);
+        }
+
+        .recipe-hero {
+            position: relative;
+            margin: -40px -20px 40px;
+            height: 400px;
+            background-image: url('/data/pictures/Chicken_Tenders.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .recipe-hero-content {
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            padding: 60px 40px 40px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .recipe-meta {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .badge {
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            background: rgba(255, 152, 0, 0.1);
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .recipe-description {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+
+        .ingredients-list {
+            list-style: none;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 20px;
+        }
+
+        .ingredients-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            color: var(--text-secondary);
+        }
+
+        .ingredients-list li:last-child {
+            border-bottom: none;
+        }
+
+        .instructions {
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .instructions ol {
+            padding-left: 20px;
+        }
+
+        .instructions li {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .recipe-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .recipe-hero {
+                height: 300px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="https://recipe.nsce.fr/" class="back-button">← Zurück zur Übersicht</a>
+        
+        <div class="recipe-hero">
+            <div class="recipe-hero-content">
+                <h1>Chicken Tenders</h1>
+                <div class="recipe-meta">
+                    <span class="badge">45 Minuten</span>
+                    <span class="badge">Mittel</span>
+                    <span class="badge">Frittiert</span>
+                </div>
+            </div>
+        </div>
+
+        <p class="recipe-description">
+            Knusprige, goldbraun frittierte Chicken Tenders mit einer würzigen Panade – perfekt als Snack oder Hauptgericht.
+        </p>
+
+        <div class="recipe-grid">
+            <div class="ingredients">
+                <h2 class="section-title">Zutaten</h2>
+                <ul class="ingredients-list">
+                    <li>Hähnchenbrustfilets oder Hähncheninnenfilets</li>
+                    <li>Buttermilch</li>
+                    <li>Mehl</li>
+                    <li>Gewürze (Paprika, Knoblauchpulver, Salz, Pfeffer)</li>
+                    <li>Eier</li>
+                    <li>Panko-Paniermehl</li>
+                    <li>Öl zum Frittieren</li>
+                </ul>
+            </div>
+
+            <div class="instructions">
+                <h2 class="section-title">Zubereitung</h2>
+                <ol>
+                    <li>Hähnchenstücke in Buttermilch und Gewürzen marinieren und für einige Stunden im Kühlschrank ziehen lassen.</li>
+                    <li>Die marinierten Stücke zuerst in Mehl, dann in verquirltem Ei und schließlich in Panko-Paniermehl wenden.</li>
+                    <li>Die panierten Hähnchenstücke in heißem Öl goldbraun und knusprig frittieren.</li>
+                    <li>Auf Küchenpapier abtropfen lassen und servieren.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

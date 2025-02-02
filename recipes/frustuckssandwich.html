@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frühstücks-Sandwich - Rezept</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        :root {
+            --primary: #ff9800;
+            --background: #0a0a0a;
+            --card-bg: #161616;
+            --text: #ffffff;
+            --text-secondary: #a0a0a0;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 12px 24px;
+            background: var(--card-bg);
+            border: none;
+            border-radius: 12px;
+            color: var(--text);
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+        .back-button:hover {
+            background: var(--primary);
+            transform: translateX(-5px);
+        }
+
+        .recipe-hero {
+            position: relative;
+            margin: -40px -20px 40px;
+            height: 400px;
+            background-image: url('/data/pictures/Fruehstuecks_Sandwich.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .recipe-hero-content {
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            padding: 60px 40px 40px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .recipe-meta {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .badge {
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            background: rgba(255, 152, 0, 0.1);
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .recipe-description {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+
+        .ingredients-list {
+            list-style: none;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 20px;
+        }
+
+        .ingredients-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            color: var(--text-secondary);
+        }
+
+        .ingredients-list li:last-child {
+            border-bottom: none;
+        }
+
+        .instructions {
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .instructions ol {
+            padding-left: 20px;
+        }
+
+        .instructions li {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .recipe-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .recipe-hero {
+                height: 300px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="https://recipe.nsce.fr/" class="back-button">← Zurück zur Übersicht</a>
+        
+        <div class="recipe-hero">
+            <div class="recipe-hero-content">
+                <h1>Frühstücks-Sandwich</h1>
+                <div class="recipe-meta">
+                    <span class="badge">15 Minuten</span>
+                    <span class="badge">Einfach</span>
+                    <span class="badge">Frühstück</span>
+                </div>
+            </div>
+        </div>
+
+        <p class="recipe-description">
+            Ein schnelles und leckeres Frühstücks-Sandwich mit Ei, Käse und Schinken – perfekt für einen guten Start in den Tag.
+        </p>
+
+        <div class="recipe-grid">
+            <div class="ingredients">
+                <h2 class="section-title">Zutaten</h2>
+                <ul class="ingredients-list">
+                    <li>2 Eier</li>
+                    <li>2 Scheiben Brot</li>
+                    <li>Käse (z. B. Cheddar)</li>
+                    <li>Schinken oder Speck</li>
+                    <li>Butter oder Öl zum Braten</li>
+                    <li>Salz und Pfeffer nach Geschmack</li>
+                </ul>
+            </div>
+
+            <div class="instructions">
+                <h2 class="section-title">Zubereitung</h2>
+                <ol>
+                    <li>Eier verquirlen und mit Salz und Pfeffer würzen.</li>
+                    <li>Butter oder Öl in einer Pfanne erhitzen und die Eier hineingießen.</li>
+                    <li>Die Brotscheiben auf die noch flüssigen Eier legen.</li>
+                    <li>Wenn die Eier gestockt sind, alles wenden, sodass das Brot unten ist.</li>
+                    <li>Käse und Schinken oder Speck darauflegen.</li>
+                    <li>Die überstehenden Eiränder über die Füllung klappen und das Sandwich zusammenklappen.</li>
+                    <li>Von beiden Seiten goldbraun braten, bis der Käse geschmolzen ist.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
