@@ -85,6 +85,7 @@
             transition: all 0.4s ease;
             text-decoration: none;
             display: block;
+            position: relative;
         }
 
         .recipe-card:hover {
@@ -136,6 +137,28 @@
             overflow: hidden;
         }
 
+        .verification-badge {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .verified {
+            color: white;
+            background-color: #0095F6;
+        }
+
+        .ai-made {
+            color: #FF9800;
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.5rem;
@@ -168,9 +191,12 @@
                     </div>
                     <p class="recipe-description">Leckerer Burger Bowl mit frischem Salat, Tomaten und Ketchup, ist auch gesünder als ein einfacher Burger</p>
                 </div>
+                <div class="verification-badge verified">
+                    <svg fill="rgb(0, 149, 246)" height="18" role="img" viewBox="0 0 40 40" width="18"><title>Verifiziert</title><path d="M19.998 3.094 14.638 0l-2.972 5.15H5.432v6.354L0 14.64 3.094 20 0 25.359l5.432 3.137v5.905h5.975L14.638 40l5.36-3.094L25.358 40l3.232-5.6h6.162v-6.01L40 25.359 36.905 20 40 14.641l-5.248-3.03v-6.46h-6.419L25.358 0l-5.36 3.094Zm7.415 11.225 2.254 2.287-11.43 11.5-6.835-6.93 2.244-2.258 4.587 4.581 9.18-9.18Z" fill-rule="evenodd"></path></svg>
+                </div>
             </a>
             <a href="/recipes/chrickent-tenders" class="recipe-card">
-                <img src="/data/pictures/chicken-tenders.jpg" alt="Chricken Tenders" class="recipe-image">
+                <img src="/data/pictures/chrickent-tenders.jpg" alt="Chricken Tenders" class="recipe-image">
                 <div class="recipe-content">
                     <h2 class="recipe-title">Chricken Tenders</h2>
                     <div class="recipe-meta">
@@ -178,6 +204,12 @@
                         <span class="badge">Mittel</span>
                     </div>
                     <p class="recipe-description">...</p>
+                </div>
+                <div class="verification-badge ai-made">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2a10 10 0 1 0 10 10H12V2z"></path>
+                        <path d="M12 12L2 12"></path>
+                    </svg>
                 </div>
             </a>
             <a href="/recipes/frustucks-sandwich" class="recipe-card">
@@ -190,6 +222,12 @@
                     </div>
                     <p class="recipe-description">...</p>
                 </div>
+                <div class="verification-badge ai-made">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2a10 10 0 1 0 10 10H12V2z"></path>
+                        <path d="M12 12L2 12"></path>
+                    </svg>
+                </div>
             </a>
             <a href="/recipes/instant-ramen-mit-hahnchen" class="recipe-card">
                 <img src="/data/pictures/instant-ramen-mit-hahnchen.jpg" alt="Instant-Ramen mit Hähnchen" class="recipe-image">
@@ -200,6 +238,12 @@
                         <span class="badge">Schwerer</span>
                     </div>
                     <p class="recipe-description">...</p>
+                </div>
+                <div class="verification-badge ai-made">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2a10 10 0 1 0 10 10H12V2z"></path>
+                        <path d="M12 12L2 12"></path>
+                    </svg>
                 </div>
             </a>
         </div>
