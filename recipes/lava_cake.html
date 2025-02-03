@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Bowl - Rezept</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        :root {
+            --primary: #3d5afe;
+            --background: #0a0a0a;
+            --card-bg: #161616;
+            --text: #ffffff;
+            --text-secondary: #a0a0a0;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 12px 24px;
+            background: var(--card-bg);
+            border: none;
+            border-radius: 12px;
+            color: var(--text);
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+        .back-button:hover {
+            background: var(--primary);
+            transform: translateX(-5px);
+        }
+
+        .recipe-hero {
+            position: relative;
+            margin: -40px -20px 40px;
+            height: 400px;
+            background-image: url('/data/pictures/lava_cake.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .recipe-hero-content {
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            padding: 60px 40px 40px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .recipe-meta {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .badge {
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            background: rgba(61, 90, 254, 0.1);
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .recipe-description {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+
+        .ingredients-list {
+            list-style: none;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 20px;
+        }
+
+        .ingredients-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            color: var(--text-secondary);
+        }
+
+        .ingredients-list li:last-child {
+            border-bottom: none;
+        }
+
+        .instructions {
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .instructions ol {
+            padding-left: 20px;
+        }
+
+        .instructions li {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .recipe-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .recipe-hero {
+                height: 300px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="https://recipe.nsce.fr/" class="back-button">← Zurück zur Übersicht</a>
+        
+        <div class="recipe-hero">
+            <div class="recipe-hero-content">
+                <h1>Lava Cake</h1>
+                <div class="recipe-meta">
+                    <span class="badge">20 Minuten</span>
+                    <span class="badge">Mittel</span>
+                    <span class="badge">Desert</span>
+                </div>
+            </div>
+        </div>
+
+        <p class="recipe-description">
+            Ein leckerer Schoko "Lava" Kuchen, der innen noch flüssig ist. Perfekt für den Nachtisch.
+        </p>
+
+        <div class="recipe-grid">
+            <div class="ingredients">
+                <h2 class="section-title">Zutaten</h2>
+                <ul class="ingredients-list">
+                    <li>165 g Schokolade</li>
+                    <li>2 ganze Eier</li>
+                    <li>2 Eigelb</li>
+                    <li>3 EL Zucker</li>
+                    <li>1.5 EL Brauner Zucker</li>
+                    <li>Prise Salz</li>
+                    <li>Vanille (nach gefühl)</li>
+                    <li>½ Tasse ungesalzene Butter</li>
+                    <li>2 EL Mehl</li>
+
+                </ul>
+            </div>
+
+            <div class="instructions">
+                <h2 class="section-title">Zubereitung</h2>
+                <ol>
+                    <li>Schokolade mit ½ tasse Butter schmelzen</li>
+                    <li>Ei-Mischung unterrühren</li>
+                    <li>Alles vermischen</li>
+                    <li>Bei 230 Grad für 11 Minuten backen</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
